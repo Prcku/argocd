@@ -4,11 +4,11 @@ configMapGenerator:
   literals:
   - |
     repository.credentials=- passwordSecret:
-        key: git_token
+        key: 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
         name: autopilot-secret
-      url: https://github.com/
+      url: https://github.com/Prcku/argocd.git
       usernameSecret:
-        key: git_username
+        key: Prcku
         name: autopilot-secret
   name: argocd-cm
 kind: Kustomization
