@@ -1,17 +1,17 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
-configMapGenerator:
-- behavior: merge
-  literals:
-  - |
-    repository.credentials=- passwordSecret:
-        key: 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
-        name: autopilot-secret
-      url: https://github.com/Prcku/argocd.git
-      usernameSecret:
-        key: Prcku
-        name: autopilot-secret
-  name: argocd-cm
+#configMapGenerator:
+#- behavior: merge
+#  literals:
+#  - |
+#    repository.credentials=- passwordSecret:
+#        key: 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
+#        name: autopilot-secret
+#      url: https://github.com/Prcku/argocd.git
+#      usernameSecret:
+#        key: Prcku
+#        name: autopilot-secret
+#  name: argocd-cm
 kind: Kustomization
 namespace: argocd
 resources:
-- https://raw.githubusercontent.com/argoproj/argo-cd/v2.7.2/manifests/ha/install.yaml
+- https://raw.githubusercontent.com/argoproj/argo-cd/v2.7.2/manifests/install.yaml
